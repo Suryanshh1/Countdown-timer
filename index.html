@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="timer-wrapper">
+            <h1 class="title">Countdown Timer</h1>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="target-date">Select Target Date & Time:</label>
+                    <input type="datetime-local" id="target-date" class="date-input">
+                </div>
+
+                <div class="input-group">
+                    <label for="event-name">Event Name (Optional):</label>
+                    <input type="text" id="event-name" placeholder="Enter event name" class="text-input">
+                </div>
+
+                <button id="start-timer" class="start-btn">Start Timer</button>
+            </div>
+
+            <!-- Timer Display -->
+            <div class="timer-display" id="timer-display">
+                <div class="event-title" id="event-title"></div>
+
+                <div class="time-container">
+                    <div class="time-box">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <button id="reset-timer" class="reset-btn">Reset Timer</button>
+            </div>
+
+            <!-- Completion Message -->
+            <div class="completion-message" id="completion-message">
+                <h2> Time's Up! </h2>
+                <p id="completion-text">Your countdown has ended!</p>
+                <button id="new-timer" class="new-timer-btn">Start New Timer</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
